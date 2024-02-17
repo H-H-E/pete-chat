@@ -19,7 +19,7 @@ const Header = memo(() => {
     <ChatHeader
       left={
         <Link aria-label={'home'} href={'/'}>
-          <Logo className={styles.logo} extra={'Discover'} size={36} type={'text'} />
+          <Logo className={styles.logo} extra={'Discover'} size={36} type={'high-contrast'} />
         </Link>
       }
       right={<ShareAgentButton />}

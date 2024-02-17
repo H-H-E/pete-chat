@@ -33,10 +33,10 @@ const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
           position: 'relative',
         }}
       >
-        {mobile ? <LogoThree size={size.logo} /> : <LogoSpline height={'100%'} width={'100%'} />}
+        {mobile ? <LogoThree size={size.logo} /> : <LogoSpline height={'0%'} width={'0%'} />}
       </Flexbox>
       <div className={styles.title} style={{ fontSize: size.title }}>
-        <strong style={mobile ? { fontSize: '1.2em' } : {}}>LobeChat</strong>
+        <strong style={mobile ? { fontSize: '1.2em' } : {}}>PoiesisPete</strong>
         {mobile ? <br /> : ' '}
         {t('slogan.title')}
       </div>
