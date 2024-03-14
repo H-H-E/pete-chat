@@ -54,13 +54,33 @@ export interface OllamaConfig {
   endpoint?: string;
 }
 
+export interface PerplexityConfig {
+  apiKey?: string;
+  enabled: boolean;
+  endpoint?: string;
+}
+
+export interface AnthropicConfig {
+  apiKey?: string;
+  enabled: boolean;
+  endpoint?: string;
+}
+
+export interface MistralConfig {
+  apiKey?: string;
+  enabled: boolean;
+}
+
 export interface GlobalLLMConfig {
+  anthropic: AnthropicConfig;
   azure: AzureOpenAIConfig;
   bedrock: AWSBedrockConfig;
   google: GoogleConfig;
+  mistral: MistralConfig;
   moonshot: MoonshotConfig;
   ollama: OllamaConfig;
   openAI: OpenAIConfig;
+  perplexity: PerplexityConfig;
   zhipu: ZhiPuConfig;
 }
 
