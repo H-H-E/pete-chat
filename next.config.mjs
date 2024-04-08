@@ -53,13 +53,14 @@ const nextConfig = {
       asyncWebAssembly: true,
       layers: true,
     };
+    module.exports = {
+      ignoreDuringBuilds: true,
+    };
 
     // to fix shikiji compile error
     // refs: https://github.com/antfu/shikiji/issues/23
     config.module.rules.push({
-      eslint: {
-        ignoreDuringBuilds: true,
-      },
+    
       test: /\.m?js$/,
       type: 'javascript/auto',
       resolve: {
