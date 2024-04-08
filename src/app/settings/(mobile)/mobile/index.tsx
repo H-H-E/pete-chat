@@ -3,17 +3,16 @@
 import { Divider } from 'antd';
 import { createStyles } from 'antd-style';
 import { memo } from 'react';
-import { Center } from 'react-layout-kit';
+import { Center, Flexbox } from 'react-layout-kit';
 
 import { CURRENT_VERSION } from '@/const/version';
 import AvatarWithUpload from '@/features/AvatarWithUpload';
 import { useGlobalStore } from '@/store/global';
 import { commonSelectors } from '@/store/global/selectors';
 
-import SettingList from '../../features/SettingList';
-import AvatarBanner from '../features/AvatarBanner';
-import ExtraList from '../features/ExtraList';
-import Layout from './layout.mobile';
+import SettingList from  '/features/SettingList';
+import AvatarBanner from './features/AvatarBanner';
+import ExtraList from './features/ExtraList';
 
 const useStyles = createStyles(({ css, token }) => ({
   divider: css`
@@ -31,9 +30,9 @@ const Setting = memo(() => {
   const { styles } = useStyles();
 
   return (
-    <Layout>
+    <Flexbox style={{ overflow: 'scroll' }}>
       <AvatarBanner avatar={avatar}>
-        <Center style={{ position: 'absolute', zIndex: 2 }}>
+        <Center style={{ marginTop: 32, position: 'absolute', zIndex: 2 }}>
           <AvatarWithUpload size={88} />
         </Center>
       </AvatarBanner>
@@ -47,7 +46,7 @@ const Setting = memo(() => {
           </Divider>
         </Center>
       </div>
-    </Layout>
+    </Flexbox>
   );
 });
 
