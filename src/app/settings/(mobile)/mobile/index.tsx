@@ -10,9 +10,9 @@ import AvatarWithUpload from '@/features/AvatarWithUpload';
 import { useGlobalStore } from '@/store/global';
 import { commonSelectors } from '@/store/global/selectors';
 
-import SettingList from  '/features/SettingList';
-import AvatarBanner from './features/AvatarBanner';
-import ExtraList from './features/ExtraList';
+import SettingList from '../../features/SettingList';
+import AvatarBanner from '../features/AvatarBanner';
+import ExtraList from '../features/ExtraList';
 
 const useStyles = createStyles(({ css, token }) => ({
   divider: css`
@@ -42,7 +42,7 @@ const Setting = memo(() => {
         <ExtraList />
         <Center style={{ paddingInline: 64 }}>
           <Divider>
-            <span className={styles.footer}>LobeChat v{CURRENT_VERSION}</span>
+            <span className={styles.footer}>Poiesis Pete v{CURRENT_VERSION}</span>
           </Divider>
         </Center>
       </div>
