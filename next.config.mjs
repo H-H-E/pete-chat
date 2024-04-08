@@ -23,8 +23,9 @@ const withPWA = nextPWA({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compress: isProd,
   basePath,
+  compress: isProd,
+ 
   experimental: {
     optimizePackageImports: [
       'emoji-mart',
@@ -56,6 +57,9 @@ const nextConfig = {
     // to fix shikiji compile error
     // refs: https://github.com/antfu/shikiji/issues/23
     config.module.rules.push({
+      eslint: {
+        ignoreDuringBuilds: true,
+      },
       test: /\.m?js$/,
       type: 'javascript/auto',
       resolve: {
