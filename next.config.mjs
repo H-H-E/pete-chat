@@ -27,6 +27,7 @@ const nextConfig = {
   compress: isProd,
  
   experimental: {
+
     optimizePackageImports: [
       'emoji-mart',
       '@emoji-mart/react',
@@ -53,9 +54,7 @@ const nextConfig = {
       asyncWebAssembly: true,
       layers: true,
     };
-    module.exports = {
-      ignoreDuringBuilds: true,
-    };
+    
 
     // to fix shikiji compile error
     // refs: https://github.com/antfu/shikiji/issues/23
@@ -68,7 +67,13 @@ const nextConfig = {
       },
     });
 
-    return config;
+    return config},
+
+    eslint: {
+    ignoreDuringBuilds: true,
+    
+
+
   },
 };
 
