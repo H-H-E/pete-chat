@@ -12,9 +12,11 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  compress: isProd,
   basePath,
+  compress: isProd,
+ 
   experimental: {
+
     optimizePackageImports: [
       'emoji-mart',
       '@emoji-mart/react',
@@ -41,10 +43,12 @@ const nextConfig = {
       asyncWebAssembly: true,
       layers: true,
     };
+    
 
     // to fix shikiji compile error
     // refs: https://github.com/antfu/shikiji/issues/23
     config.module.rules.push({
+    
       test: /\.m?js$/,
       type: 'javascript/auto',
       resolve: {
@@ -52,7 +56,13 @@ const nextConfig = {
       },
     });
 
-    return config;
+    return config},
+
+    eslint: {
+    ignoreDuringBuilds: true,
+    
+
+
   },
 };
 

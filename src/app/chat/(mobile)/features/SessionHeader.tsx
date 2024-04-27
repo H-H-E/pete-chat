@@ -31,14 +31,11 @@ const Header = memo(() => {
 
   return (
     <MobileNavBar
+      center={<Logo type={'text'} />}
       left={
-        <Flexbox align={'center'} gap={8} horizontal style={{ marginLeft: 8 }}>
-          <div onClick={() => router.push('/settings')}>
-            {avatar ? <Avatar avatar={avatar} size={28} /> : <Logo size={28} />}
-          </div>
-          <Logo type={'text'} />
-          <SyncStatusInspector placement={'bottom'} />
-        </Flexbox>
+        <div onClick={() => router.push('/settings')} style={{ marginLeft: 8 }}>
+          {avatar ? <Avatar avatar={avatar} size={28} /> : <Logo size={0} />}
+        </div>
       }
       right={
         showCreateSession && (

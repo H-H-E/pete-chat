@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { PluginErrorType } from '@lobehub/chat-plugin-sdk';
 import { t } from 'i18next';
 import { Md5 } from 'ts-md5';

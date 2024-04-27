@@ -10,7 +10,7 @@ import ShareAgentButton from '../../features/ShareAgentButton';
 const Header = memo(() => {
   return (
     <MobileNavBar
-      center={<Logo type={'text'} />}
+      center={<Logo  size={0}/>}
       right={<ShareAgentButton mobile />}
       style={mobileHeaderSticky}
     />

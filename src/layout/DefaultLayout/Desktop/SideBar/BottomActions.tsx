@@ -4,7 +4,6 @@ import {
   Book,
   Feather,
   FileClock,
-  Github,
   HardDriveDownload,
   HardDriveUpload,
   Heart,
@@ -17,7 +16,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { ABOUT, CHANGELOG, DISCORD, DOCUMENTS, FEEDBACK, GITHUB } from '@/const/url';
+import { ABOUT, CHANGELOG, DISCORD, DOCUMENTS, FEEDBACK } from '@/const/url';
 import DataImporter from '@/features/DataImporter';
 import { configService } from '@/services/config';
 import { GlobalStore, useGlobalStore } from '@/store/global';
@@ -120,9 +119,6 @@ const BottomActions = memo<BottomActionProps>(({ tab }) => {
 
   return (
     <>
-      <Link aria-label={'GitHub'} href={GITHUB} target={'_blank'}>
-        <ActionIcon icon={Github} placement={'right'} title={'GitHub'} />
-      </Link>
       <Link aria-label={t('document')} href={DOCUMENTS} target={'_blank'}>
         <ActionIcon icon={Book} placement={'right'} title={t('document')} />
       </Link>

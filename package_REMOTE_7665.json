@@ -1,6 +1,6 @@
 {
   "name": "@lobehub/chat",
-  "version": "0.150.5",
+  "version": "0.146.1",
   "description": "Lobe Chat - an open-source, high-performance chatbot framework that supports speech synthesis, multimodal, and extensible Function Call plugin system. Supports one-click free deployment of your private ChatGPT/LLM web application.",
   "keywords": [
     "framework",
@@ -32,13 +32,13 @@
     "build:analyze": "ANALYZE=true next build",
     "build:docker": "DOCKER=true next build && npm run build-sitemap",
     "dev": "next dev -p 3010",
-    "docs:i18n": "lobe-i18n md && npm run workflow:docs && npm run lint:mdx",
-    "docs:seo": "lobe-seo && npm run workflow:mdx && npm run lint:mdx",
+    "docs": "lobe-i18n md && npm run workflow:docs",
     "i18n": "npm run workflow:i18n && lobe-i18n",
+    "i18n:docs": "lobe-i18n md && npm run workflow:docs",
     "lint": "npm run lint:ts && npm run lint:style && npm run type-check && npm run lint:circular",
     "lint:circular": "dpdm src/**/*.ts  --warning false  --tree false  --exit-code circular:1  -T true --skip-dynamic-imports circular",
     "lint:md": "remark . --quiet --frail --output",
-    "lint:mdx": "eslint \"{contributing,docs}/**/*.mdx\" --quiet --fix",
+    "lint:mdx": "eslint \"{contributing,docs}/**/*.mdx\" --fix",
     "lint:style": "stylelint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint:ts": "eslint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky",
@@ -53,7 +53,6 @@
     "type-check": "tsc --noEmit",
     "workflow:docs": "tsx scripts/docsWorkflow/index.ts",
     "workflow:i18n": "tsx scripts/i18nWorkflow/index.ts",
-    "workflow:mdx": "tsx scripts/mdxWorkflow/index.ts",
     "workflow:readme": "tsx scripts/readmeWorkflow/index.ts"
   },
   "lint-staged": {
@@ -62,8 +61,7 @@
       "prettier --write --no-error-on-unmatched-pattern"
     ],
     "*.mdx": [
-      "npm run workflow:mdx",
-      "eslint --quiet --fix"
+      "eslint --fix --quiet"
     ],
     "*.json": [
       "prettier --write --no-error-on-unmatched-pattern"
