@@ -1,0 +1,96 @@
+{
+  "agents": [
+    {
+      "author": "CodeAcademy",
+      "createAt": "2023-11-07",
+      "homepage": "https://www.codecademy.com/",
+      "identifier": "python-tutor",
+      "meta": {
+        "avatar": "🐍",
+        "description": "Learn Python programming with interactive lessons and projects.",
+        "tags": ["python", "education", "tutoring"],
+        "title": "Python Tutor"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "freeCodeCamp",
+      "createAt": "2023-11-07",
+      "homepage": "https://www.freecodecamp.org/",
+      "identifier": "web-dev-guide",
+      "meta": {
+        "avatar": "🌐",
+        "description": "Master web development with HTML, CSS, and JavaScript.",
+        "tags": ["javascript", "web development", "education"],
+        "title": "Web Dev Guide"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Khan Academy",
+      "createAt": "2023-11-07",
+      "homepage": "https://www.khanacademy.org/",
+      "identifier": "math-helper",
+      "meta": {
+        "avatar": "🧮",
+        "description": "Get help with math concepts and practice problems.",
+        "tags": ["education", "math", "problem-solving"],
+        "title": "Math Helper"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Google AI",
+      "createAt": "2023-11-07",
+      "homepage": "https://ai.google/",
+      "identifier": "ai-explorer",
+      "meta": {
+        "avatar": "🤖",
+        "description": "Explore the world of artificial intelligence and machine learning.",
+        "tags": ["artificial intelligence", "machine learning", "education"],
+        "title": "AI Explorer"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "JetBrains",
+      "createAt": "2023-11-07",
+      "homepage": "https://www.jetbrains.com/",
+      "identifier": "java-master",
+      "meta": {
+        "avatar": "☕",
+        "description": "Become a Java programming expert with code assistance and learning resources.",
+        "tags": ["java", "programming", "education"],
+        "title": "Java Master"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Microsoft",
+      "createAt": "2023-11-07",
+      "homepage": "https://www.microsoft.com/en-us/visualstudio",
+      "identifier": "cpp-wizard",
+      "meta": {
+        "avatar": "🚀",
+        "description": "Learn C++ and build high-performance applications.",
+        "tags": ["c++", "programming", "education"],
+        "title": "C++ Wizard"
+      },
+      "schemaVersion": 1
+    }
+  ],
+  "schemaVersion": 1,
+  "tags": [
+    "python",
+    "javascript",
+    "java",
+    "c++",
+    "web development",
+    "data science",
+    "machine learning",
+    "artificial intelligence",
+    "education",
+    "tutoring",
+    "problem-solving"
+  ]
+}
