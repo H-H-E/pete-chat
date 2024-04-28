@@ -13,7 +13,7 @@
     "clear": {
       "action": "Clear Now",
       "confirm": "Confirm to clear all chat data?",
-      "desc": "This will clear all session data, including agent, files, messages, plugins, etc.",
+      "desc": "This will clear all session data, including presets, files, messages, plugins, etc.",
       "success": "All session messages have been cleared",
       "title": "Clear All Session Messages"
     },
@@ -124,22 +124,22 @@
       "title": "Background Color"
     },
     "description": {
-      "placeholder": "Enter agent description",
-      "title": "Agent Description"
+      "placeholder": "Enter preset description",
+      "title": "Preset Description"
     },
     "name": {
-      "placeholder": "Enter agent name",
+      "placeholder": "Enter preset name",
       "title": "Name"
     },
     "prompt": {
-      "placeholder": "Enter role prompt word",
+      "placeholder": "Enter your prompt here",
       "title": "Role Setting"
     },
     "tag": {
       "placeholder": "Enter tag",
       "title": "Tag"
     },
-    "title": "Agent Information"
+    "title": "Preset Information"
   },
   "settingChat": {
     "autoCreateTopicThreshold": {
@@ -275,7 +275,7 @@
       "title": "Text-to-Speech Service"
     },
     "voice": {
-      "desc": "Select a voice for the current agent, different TTS services support different voices",
+      "desc": "Select a voice for the current preset, different TTS services support different voices",
       "preview": "Voice Preview",
       "title": "Text-to-Speech Voice"
     }
@@ -312,11 +312,11 @@
     "title": "Theme Settings"
   },
   "submitAgentModal": {
-    "button": "Submit Agent",
-    "identifier": "Agent Identifier",
-    "metaMiss": "Please complete the agent information before submitting. It should include name, description, and tags",
-    "placeholder": "Enter a unique identifier for the agent, e.g. web-development",
-    "tooltips": "Share to the agent marketplace"
+    "button": "Submit Preset",
+    "identifier": "Preset Identifier",
+    "metaMiss": "Please complete the preset information before submitting. It should include name, description, and tags",
+    "placeholder": "Enter a unique identifier for the preset, e.g. web-development",
+    "tooltips": "Share to the preset marketplace"
   },
   "sync": {
     "device": {
@@ -354,7 +354,7 @@
   },
   "tab": {
     "about": "About",
-    "agent": "Default Agent",
+    "agent": "Default Preset",
     "common": "Common Settings",
     "experiment": "Experiment",
     "llm": "Language Model",

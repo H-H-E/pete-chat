@@ -1,5 +1,5 @@
 {
-  "addAgent": "Add Agent",
+  "addAgent": "Add Preset",
   "guide": {
     "func1": {
       "desc1": "Enter the settings page you want to submit to the assistant by clicking on the settings icon in the upper right corner of the chat window.",
@@ -15,16 +15,16 @@
     }
   },
   "search": {
-    "placeholder": "Search agent name, description or keywords..."
+    "placeholder": "Search preset name, description or keywords..."
   },
   "sidebar": {
     "comment": "Comments",
     "prompt": "Prompts",
-    "title": "Agent Details"
+    "title": "Preset Details"
   },
-  "submitAgent": "Submit Agent",
+  "submitAgent": "Submit Preset",
   "title": {
-    "allAgents": "All Agents",
-    "recentSubmits": "Recent Submits"
+    "allAgents": "All Presets",
+    "recentSubmits": "Recently Submitted"
   }
 }

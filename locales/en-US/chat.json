@@ -2,16 +2,16 @@
   "ModelSwitch": {
     "title": "Model"
   },
-  "agentDefaultMessage": "Hello, I'm **{{name}}**. You can start chatting with me right away, or go to [Agent Settings](/chat/settings#session={{id}}) to complete my information.",
+  "agentDefaultMessage": "Hello, I'm **{{name}}**. You can start chatting with me right away, or go to [Preset Settings](/chat/settings#session={{id}}) to complete my information.",
   "agentDefaultMessageWithSystemRole": "Hello, I'm **{{name}}**, {{systemRole}}. Let's start chatting!",
   "backToBottom": "Back to bottom",
   "clearCurrentMessages": "Clear current session messages",
   "confirmClearCurrentMessages": "You are about to clear the current session messages. Once cleared, they cannot be retrieved. Please confirm your action.",
-  "confirmRemoveSessionItemAlert": "You are about to delete this agent. Once deleted, it cannot be retrieved. Please confirm your action.",
-  "confirmRemoveSessionSuccess": "Agent removed successfully",
-  "defaultAgent": "Default Agent",
+  "confirmRemoveSessionItemAlert": "You are about to delete this preset. Once deleted, it cannot be retrieved. Please confirm your action.",
+  "confirmRemoveSessionSuccess": "Preset removed successfully",
+  "defaultAgent": "Default Preset",
   "defaultList": "Default List",
-  "defaultSession": "Default Agent",
+  "defaultSession": "Default Preset",
   "duplicateSession": {
     "loading": "Copying...",
     "success": "Copy successful",
@@ -21,9 +21,9 @@
   "emptyAgent": "No assistant available",
   "historyRange": "History Range",
   "inbox": {
-    "defaultMessage": "Hello, I'm PoiesisPete your computerTutor. You can ask me anything, and I'll do my best to answer you. If you need a more professional or customized agent, click on `+` to create a custom agent.",
-    "desc": "Activate the brain cluster and spark creative thinking. Your virtual agent is here to communicate with you about everything.",
-    "title": "Just Chat"
+    "defaultMessage": "Hello, I'm Poiesis Pete. Feel free to ask me anything and I'll do my best to provide a helpful response. For more specialized or customized assistance, you can create a new agent by clicking the `+` button.",
+    "desc": "Engage with your AI assistant to discuss a wide range of topics and get creative insights. Your virtual agent is ready to communicate with you.",
+    "title": "Default Preset"
   },
   "input": {
     "addAi": "Add an AI message",
@@ -39,21 +39,21 @@
     "delAndRegenerate": "Delete and Regenerate",
     "regenerate": "Regenerate"
   },
-  "newAgent": "New Agent",
+  "newAgent": "New Preset",
   "noDescription": "No description available",
   "pin": "Pin",
   "pinOff": "Unpin",
   "regenerate": "Regenerate",
   "roleAndArchive": "Role and Archive",
-  "searchAgentPlaceholder": "Search agents and conversations...",
+  "searchAgentPlaceholder": "Search presets and conversations...",
   "sendPlaceholder": "Type your message here...",
   "sessionGroup": {
     "config": "Group Management",
-    "confirmRemoveGroupAlert": "This group is about to be deleted. After deletion, the agents in this group will be moved to the default list. Please confirm your operation.",
-    "createAgentSuccess": "Agent created successfully",
+    "confirmRemoveGroupAlert": "This group is about to be deleted. After deletion, the presets in this group will be moved to the default list. Please confirm your operation.",
+    "createAgentSuccess": "Preset created successfully",
     "createGroup": "Add New Group",
     "createSuccess": "Created successfully",
-    "creatingAgent": "Creating agent...",
+    "creatingAgent": "Creating preset...",
     "inputPlaceholder": "Please enter group name...",
     "moveGroup": "Move to Group",
     "newGroup": "New Group",
@@ -72,7 +72,7 @@
     "withBackground": "Include Background Image",
     "withFooter": "Include Footer",
     "withPluginInfo": "Include Plugin Information",
-    "withSystemRole": "Include Agent Role Setting"
+    "withSystemRole": "Include Preset Role Setting"
   },
   "stt": {
     "action": "Voice Input",
@@ -124,7 +124,7 @@
     "action": "Text-to-Speech",
     "clear": "Clear Speech"
   },
-  "updateAgent": "Update Agent Information",
+  "updateAgent": "Update Preset Information",
   "upload": {
     "actionFiletip": "Update File",
     "actionTooltip": "Upload Image",
