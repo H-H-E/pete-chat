@@ -1,0 +1,96 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String    @id
+  provider String
+  avatar   String?
+  settings Settings?
+  sessions Session[]
+}
+
+model Settings {
+  id           String  @id
+  defaultAgent Json
+  fontSize     Int     @default(14)
+  language     String
+  languageModel Json?
+  password     String
+  themeMode    String
+  tts          Json
+  user         User    @relation(fields: [userId], references: [id])
+  userId       String  @unique
+}
+
+model Session {
+  id             String        @id
+  userId         String
+  user           User          @relation(fields: [userId], references: [id])
+  group          String        @default("default")
+  pinned         Boolean       @default(false)
+  messages       Message[]
+  topics         Topic[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  SessionGroup   SessionGroup? @relation(fields: [sessionGroupId], references: [id])
+  sessionGroupId String?
+}
+
+model Message {
+  id        String   @id
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id])
+  content   String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  traceId   String?
+}
+
+enum Role {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+model Topic {
+  id        String   @id
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id])
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SessionGroup {
+  id        String    @id
+  name      String
+  sort      Int       @default(0)
+  sessions  Session[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Plugin {
+  identifier String   @id
+  type       String
+  manifest   Json
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model File {
+  id        String   @id
+  name      String
+  type      String
+  size      Int
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

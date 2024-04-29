@@ -4,6 +4,9 @@ import { getServerConfig } from '@/config/server';
 
 import { ssoProviders } from './sso-providers';
 
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import prisma from '@/libs/prisma/prisma';
+
 const { NEXTAUTH_SECRET, ENABLE_OAUTH_SSO, SSO_PROVIDERS } = getServerConfig();
 
 export const initSSOProviders = () => {
@@ -19,6 +22,7 @@ export const initSSOProviders = () => {
 };
 
 const nextAuth = NextAuth({
+  adapter: PrismaAdapter(prisma),
   callbacks: {
     // Note: Data processing order of callback: authorize --> jwt --> session
     async jwt({ token, account }) {
