@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <html>
+    <html dir="ltr" lang="en-US">
       <body>{children}</body>
     </html>
   );

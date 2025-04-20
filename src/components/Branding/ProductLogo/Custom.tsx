@@ -1,9 +1,9 @@
 import type { IconType } from '@lobehub/icons';
 import type { LobeChatProps } from '@lobehub/ui/brand';
 import { createStyles, useTheme } from 'antd-style';
-import Image, { ImageProps } from 'next/image';
-import { ReactNode, forwardRef, memo } from 'react';
-import { Flexbox, FlexboxProps } from 'react-layout-kit';
+import Image, { type ImageProps } from 'next/image';
+import { type ReactNode, forwardRef, memo } from 'react';
+import { Flexbox, type FlexboxProps } from 'react-layout-kit';
 
 import { BRANDING_LOGO_URL, BRANDING_NAME } from '@/const/branding';
 
@@ -71,15 +71,24 @@ const CustomLogo = memo<LobeChatProps>(({ extra, size = 32, className, style, ty
   const { styles } = useStyles();
   let logoComponent: ReactNode;
 
+  // Determine if we should use the image logo or fall back to text
+  const useImageLogo = !!BRANDING_LOGO_URL;
+
   switch (type) {
     case '3d':
     case 'flat': {
-      logoComponent = <CustomImageLogo size={size} style={style} {...rest} />;
+      logoComponent = useImageLogo ? (
+        <CustomImageLogo size={size} style={style} {...rest} />
+      ) : (
+        <CustomTextLogo size={size} style={style} {...rest} />
+      );
       break;
     }
     case 'mono': {
-      logoComponent = (
+      logoComponent = useImageLogo ? (
         <CustomImageLogo size={size} style={{ filter: 'grayscale(100%)', ...style }} {...rest} />
+      ) : (
+        <CustomTextLogo size={size} style={style} {...rest} />
       );
       break;
     }
@@ -90,8 +99,11 @@ const CustomLogo = memo<LobeChatProps>(({ extra, size = 32, className, style, ty
     case 'combine': {
       logoComponent = (
         <>
-          <CustomImageLogo size={size} />
-          <CustomTextLogo size={size} style={{ marginLeft: Math.round(size / 4) }} />
+          {useImageLogo && <CustomImageLogo size={size} />}
+          <CustomTextLogo
+            size={size}
+            style={useImageLogo ? { marginLeft: Math.round(size / 4) } : style}
+          />
         </>
       );
 
@@ -105,7 +117,11 @@ const CustomLogo = memo<LobeChatProps>(({ extra, size = 32, className, style, ty
       break;
     }
     default: {
-      logoComponent = <CustomImageLogo size={size} style={style} {...rest} />;
+      logoComponent = useImageLogo ? (
+        <CustomImageLogo size={size} style={style} {...rest} />
+      ) : (
+        <CustomTextLogo size={size} style={style} {...rest} />
+      );
       break;
     }
   }
